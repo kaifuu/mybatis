@@ -8,29 +8,29 @@
 
     <context id="DB2Tables" targetRuntime="MyBatis3">
         <jdbcConnection driverClass="com.mysql.jdbc.Driver"
-                        connectionURL="jdbc:mysql://192.168.8.217:3306/lejane?autoReconnect=true&amp;useUnicode=true&amp;characterEncoding=UTF-8&amp;zeroDateTimeBehavior=round"
-                        userId="lejane"
-                        password="lejane2017">
+                        connectionURL="jdbc:mysql://192.168.8.:3306/health_business?autoReconnect=true&amp;useUnicode=true&amp;characterEncoding=UTF-8&amp;zeroDateTimeBehavior=round&amp;allowMultiQueries=true&amp;useSSL=false"
+                        userId=""
+                        password="2017">
         </jdbcConnection>
 
         <javaTypeResolver >
             <property name="forceBigDecimals" value="false" />
         </javaTypeResolver>
 
-        <javaModelGenerator targetPackage="com.borui.lejane.model" targetProject="src/main/java">
+        <javaModelGenerator targetPackage="com.zhf.model" targetProject="src/main/java">
             <property name="enableSubPackages" value="true" />
             <property name="trimStrings" value="true" />
         </javaModelGenerator>
 
-        <sqlMapGenerator targetPackage="com.borui.lejane.data.mappers" targetProject="src/main/java">
+        <sqlMapGenerator targetPackage="com.zhf.data.mappers" targetProject="src/main/java">
             <property name="enableSubPackages" value="true" />
         </sqlMapGenerator>
 
-        <javaClientGenerator type="XMLMAPPER" targetPackage="com.borui.lejane.data"  targetProject="src/main/java">
+        <javaClientGenerator type="XMLMAPPER" targetPackage="com.zhf.data"  targetProject="src/main/java">
             <property name="enableSubPackages" value="true" />
         </javaClientGenerator>
 
-        <table tableName="tbl_user_third_lnk" domainObjectName="UserThirdLnk"
+        <table tableName="tbl_user_health_card_share_record" domainObjectName="UserHealthCardShareRecord"
                enableCountByExample="false"
                enableUpdateByExample="false"
                enableDeleteByExample="false"
