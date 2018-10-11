@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+    <classPathEntry location="src/main/resources/mysql-connector-java-5.1.35.jar" />
+
+    <context id="DB2Tables" targetRuntime="MyBatis3">
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                        connectionURL="jdbc:mysql://192.168.8.217:3306/lejane?autoReconnect=true&amp;useUnicode=true&amp;characterEncoding=UTF-8&amp;zeroDateTimeBehavior=round"
+                        userId="lejane"
+                        password="lejane2017">
+        </jdbcConnection>
+
+        <javaTypeResolver >
+            <property name="forceBigDecimals" value="false" />
+        </javaTypeResolver>
+
+        <javaModelGenerator targetPackage="com.borui.lejane.model" targetProject="src/main/java">
+            <property name="enableSubPackages" value="true" />
+            <property name="trimStrings" value="true" />
+        </javaModelGenerator>
+
+        <sqlMapGenerator targetPackage="com.borui.lejane.data.mappers" targetProject="src/main/java">
+            <property name="enableSubPackages" value="true" />
+        </sqlMapGenerator>
+
+        <javaClientGenerator type="XMLMAPPER" targetPackage="com.borui.lejane.data"  targetProject="src/main/java">
+            <property name="enableSubPackages" value="true" />
+        </javaClientGenerator>
+
+        <table tableName="tbl_user_third_lnk" domainObjectName="UserThirdLnk"
+               enableCountByExample="false"
+               enableUpdateByExample="false"
+               enableDeleteByExample="false"
+               enableSelectByExample="false"
+               selectByExampleQueryId="false">
+            <property name="useActualColumnNames" value="false"/>
+        </table>
+
+
+
+    </context>
+</generatorConfiguration>
