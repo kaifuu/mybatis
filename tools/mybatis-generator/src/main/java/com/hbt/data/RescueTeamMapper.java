@@ -1,6 +1,6 @@
-package com.zhf.data;
+package com.hbt.data;
 
-import com.zhf.model.RescueTeam;
+import com.hbt.model.RescueTeam;
 
 public interface RescueTeamMapper {
     int deleteByPrimaryKey(Integer id);

@@ -1,4 +1,4 @@
-package com.zhf.model;
+package com.hbt.model;
 
 import java.math.BigDecimal;
 

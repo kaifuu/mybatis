@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.zhf.data.RescueTeamMapper">
-  <resultMap id="BaseResultMap" type="com.zhf.model.RescueTeam">
+<mapper namespace="com.hbt.data.RescueTeamMapper">
+  <resultMap id="BaseResultMap" type="com.hbt.model.RescueTeam">
     <id column="id" jdbcType="INTEGER" property="id" />
     <result column="name" jdbcType="VARCHAR" property="name" />
     <result column="province" jdbcType="VARCHAR" property="province" />
@@ -26,7 +26,7 @@
     delete from rescue_team
     where id = #{id,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" parameterType="com.zhf.model.RescueTeam">
+  <insert id="insert" parameterType="com.hbt.model.RescueTeam">
     insert into rescue_team (id, name, province, 
       scope, phone, fax, 
       organization, longitude, latitude, 
@@ -36,7 +36,7 @@
       #{organization,jdbcType=VARCHAR}, #{longitude,jdbcType=NUMERIC}, #{latitude,jdbcType=NUMERIC}, 
       #{address,jdbcType=VARCHAR})
   </insert>
-  <insert id="insertSelective" parameterType="com.zhf.model.RescueTeam">
+  <insert id="insertSelective" parameterType="com.hbt.model.RescueTeam">
     insert into rescue_team
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="id != null">
@@ -103,7 +103,7 @@
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.zhf.model.RescueTeam">
+  <update id="updateByPrimaryKeySelective" parameterType="com.hbt.model.RescueTeam">
     update rescue_team
     <set>
       <if test="name != null">
@@ -136,7 +136,7 @@
     </set>
     where id = #{id,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.zhf.model.RescueTeam">
+  <update id="updateByPrimaryKey" parameterType="com.hbt.model.RescueTeam">
     update rescue_team
     set name = #{name,jdbcType=VARCHAR},
       province = #{province,jdbcType=VARCHAR},
