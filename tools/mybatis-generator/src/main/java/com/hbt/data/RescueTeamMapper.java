@@ -2,6 +2,8 @@ package com.hbt.data;
 
 import com.hbt.model.RescueTeam;
 
+import java.util.List;
+
 public interface RescueTeamMapper {
     int deleteByPrimaryKey(Integer id);
 
@@ -14,4 +16,6 @@ public interface RescueTeamMapper {
     int updateByPrimaryKeySelective(RescueTeam record);
 
     int updateByPrimaryKey(RescueTeam record);
+
+
 }
